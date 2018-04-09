@@ -15,9 +15,9 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-    QString searchText = "";
+    QString searchText = "", searchCountry = "", searchType = "", changeRecipe = "";
     //Новый рецепт
-    QString nameRec, desRec, ingRec, logRec, countryRec, typeRec;
+    QString nameRec, desRec, ingRec, logRec, countryRec, typeRec, delRecipe;
 
 private slots:
 
@@ -42,6 +42,16 @@ private slots:
     void on_testNo_clicked();
 
     void on_testYes_clicked();
+
+    void on_backFromRecipe_clicked();
+
+    void on_listView_doubleClicked(const QModelIndex &index);
+
+    void on_searchCountry_textEdited(const QString &arg1);
+
+    void on_searchType_textEdited(const QString &arg1);
+
+    void on_changeRecipe_clicked();
 
 private:
     Ui::Widget *ui;
