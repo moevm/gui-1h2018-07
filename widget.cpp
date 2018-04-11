@@ -9,7 +9,7 @@ Widget::Widget(QWidget *parent) :
     setWindowTitle("Книга Рецептов");
 
     sdb = QSqlDatabase::addDatabase("QSQLITE");
-    sdb.setDatabaseName("C:/sqlite/book.db");
+    sdb.setDatabaseName("book.db");
 
     if(!sdb.open()) {
         qDebug() << sdb.lastError().text();
