@@ -6,7 +6,7 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    setWindowTitle("Книга Рецептов");
+    setWindowTitle("Книга � ецептов");
 
     sdb = QSqlDatabase::addDatabase("QSQLITE");
     sdb.setDatabaseName("book.db");
@@ -18,7 +18,6 @@ Widget::Widget(QWidget *parent) :
     else {
         qDebug() << "Success!";
     }
-
     model = new QSqlTableModel(this, sdb);
     model->setTable("recipes");
     model->select();
@@ -26,6 +25,9 @@ Widget::Widget(QWidget *parent) :
     ui->testWin->close();
     ui->Recipe->close();
     query = QSqlQuery(sdb);
+    if(!query.exec("select * from recipes")) {
+        query.exec("CREATE TABLE recipes (id INTEGER PRIMARY KEY AUTOINCREMENT,name VARCHAR(100),description text,ingridients text,pic BLOB,logic text,country text,type text)");
+    }
     query.exec("select * from recipes");
     while(query.next()) {
         recipes << query.value(1).toString() + ", " + query.value(6).toString() + ", " + query.value(7).toString();
