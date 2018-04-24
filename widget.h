@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QtSql>
+#include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class Widget;
@@ -17,7 +19,9 @@ public:
     ~Widget();
     QString searchText = "", searchCountry = "", searchType = "", changeRecipe = "";
     //Новый рецепт
-    QString nameRec, desRec, ingRec, logRec, countryRec, typeRec, delRecipe;
+    QString nameRec, desRec, ingRec, logRec, countryRec, typeRec, delRecipe, picName;
+    void reselectForListView(QString inquiry);
+    int favorMode = 0;
 
 private slots:
 
@@ -52,6 +56,12 @@ private slots:
     void on_searchType_textEdited(const QString &arg1);
 
     void on_changeRecipe_clicked();
+
+    void on_openButton_clicked();
+
+    void on_favor_clicked();
+
+    void on_favorButton_clicked();
 
 private:
     Ui::Widget *ui;

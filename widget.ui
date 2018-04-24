@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>876</width>
-    <height>465</height>
+    <height>469</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,17 +26,73 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="newRecipe">
+    <item row="5" column="1" rowspan="2" colspan="2">
+     <widget class="QTextEdit" name="ingOfNewRecipe"/>
+    </item>
+    <item row="9" column="1" colspan="3">
+     <widget class="QPushButton" name="saveButton">
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1" rowspan="2" colspan="2">
+     <widget class="QTextEdit" name="logOfNewRecipe"/>
+    </item>
+    <item row="3" column="1" rowspan="2" colspan="2">
+     <widget class="QTextEdit" name="desOfNewRecipe">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Страна</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QLineEdit" name="countryOfNewRecipe"/>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_5">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Тип блюда</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4" colspan="3">
+     <widget class="QPushButton" name="backButton">
+      <property name="text">
+       <string>Назад</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLineEdit" name="typeOfNewRecipe">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
        <string>Описание</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QPushButton" name="saveButton">
-      <property name="text">
-       <string>Сохранить</string>
       </property>
      </widget>
     </item>
@@ -53,16 +109,6 @@
       </property>
      </spacer>
     </item>
-    <item row="7" column="1" rowspan="2" colspan="2">
-     <widget class="QTextEdit" name="logOfNewRecipe"/>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Ингридиенты     </string>
-      </property>
-     </widget>
-    </item>
     <item row="6" column="0">
      <spacer name="verticalSpacer_3">
       <property name="orientation">
@@ -76,10 +122,10 @@
       </property>
      </spacer>
     </item>
-    <item row="9" column="2">
-     <widget class="QPushButton" name="backButton">
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Назад</string>
+       <string>Ингридиенты     </string>
       </property>
      </widget>
     </item>
@@ -103,14 +149,15 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1" rowspan="2" colspan="2">
-     <widget class="QTextEdit" name="desOfNewRecipe"/>
-    </item>
-    <item row="5" column="1" rowspan="2" colspan="2">
-     <widget class="QTextEdit" name="ingOfNewRecipe"/>
-    </item>
     <item row="0" column="1" colspan="2">
-     <widget class="QLineEdit" name="nameOfNewRecipe"/>
+     <widget class="QLineEdit" name="nameOfNewRecipe">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label">
@@ -125,29 +172,38 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QLineEdit" name="countryOfNewRecipe"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>Страна</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="typeOfNewRecipe"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_5">
+    <item row="4" column="3" rowspan="5" colspan="4">
+     <widget class="QLabel" name="pic">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(220, 230, 255);</string>
+      </property>
       <property name="text">
-       <string>Тип блюда</string>
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5" colspan="2">
+     <widget class="QPushButton" name="openButton">
+      <property name="text">
+       <string>Загрузить картинку</string>
       </property>
      </widget>
     </item>
@@ -172,24 +228,59 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="1" colspan="4">
-      <widget class="QLineEdit" name="searchCountry"/>
-     </item>
-     <item row="8" column="4">
-      <widget class="QPushButton" name="delButton">
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_11">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
-        <string>    Удалить этот рецепт </string>
+        <string>Поиск по стране: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
-     <item row="0" column="1" colspan="4">
-      <widget class="QLineEdit" name="searchLine"/>
+     <item row="0" column="6">
+      <widget class="QLineEdit" name="searchCountry">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLabel" name="label_12">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Поиск по типу: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label_7">
@@ -213,58 +304,58 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="0" rowspan="3" colspan="5">
+     <item row="0" column="1" colspan="4">
+      <widget class="QLineEdit" name="searchLine">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QLineEdit" name="searchType"/>
+     </item>
+     <item row="5" column="0" rowspan="3" colspan="9">
       <widget class="QListView" name="listView">
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(221, 237, 239)</string>
        </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_11">
+     <item row="8" column="8">
+      <widget class="QPushButton" name="delButton">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
        <property name="text">
-        <string>Поиск по стране: </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <string>    Удалить этот рецепт </string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_12">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Поиск по типу: </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="3">
+     <item row="8" column="7">
       <widget class="QPushButton" name="addButton">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -277,8 +368,12 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="4">
-      <widget class="QLineEdit" name="searchType"/>
+     <item row="8" column="0" colspan="2">
+      <widget class="QPushButton" name="favorButton">
+       <property name="text">
+        <string>Избранное ✰</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -441,54 +536,6 @@
        </property>
       </widget>
      </item>
-     <item row="10" column="0" colspan="4">
-      <widget class="QTextEdit" name="logRecipe">
-       <property name="cursor" stdset="0">
-        <cursorShape>ArrowCursor</cursorShape>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(221, 237, 239)</string>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0" colspan="4">
-      <widget class="QTextEdit" name="desRecipe">
-       <property name="cursor" stdset="0">
-        <cursorShape>ArrowCursor</cursorShape>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(221, 237, 239)</string>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0" colspan="4">
-      <widget class="QTextEdit" name="ingRecipe">
-       <property name="cursor" stdset="0">
-        <cursorShape>ArrowCursor</cursorShape>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(221, 237, 239);</string>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
      <item row="5" column="2">
       <widget class="QLabel" name="label_9">
        <property name="font">
@@ -519,13 +566,93 @@
        </property>
       </widget>
      </item>
+     <item row="8" column="0" colspan="2">
+      <widget class="QTextEdit" name="desRecipe">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(221, 237, 239)</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="2">
+      <widget class="QTextEdit" name="ingRecipe">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(221, 237, 239);</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="2">
+      <widget class="QTextEdit" name="logRecipe">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>2</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(221, 237, 239)</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2" rowspan="3" colspan="2">
+      <widget class="QLabel" name="picShow">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QPushButton" name="favor">
+       <property name="text">
+        <string>Добавить в избранное ✰</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
   </widget>
   <zorder>testWin</zorder>
   <zorder>addRecipe</zorder>
-  <zorder>mainWid</zorder>
   <zorder>Recipe</zorder>
+  <zorder>mainWid</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
